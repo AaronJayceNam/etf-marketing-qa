@@ -1,0 +1,207 @@
+{
+  "metadata": {
+    "generated_date": "2026-04-06",
+    "source": "Web research aggregation (Financer, HypeAuditor, Modash, Collabstr, Amra&Elma, Favikon, StarNgage)",
+    "notes": "Follower counts are approximate and reflect publicly available data as of Q1 2026. ETF relevance scored 1-10 based on frequency of ETF-specific content."
+  },
+  "influencers": [
+    {
+      "handle": "@humphreytalks",
+      "name": "Humphrey Yang",
+      "followers": "550K",
+      "focus": "Personal finance, investing basics, money hacks",
+      "etf_relevance": 8,
+      "region": "US",
+      "content_type": "reels",
+      "sample_content": "Index fund vs ETF explainers, beginner investing hacks, cost breakdown reels",
+      "engagement_note": "Largest finfluencer by cross-platform reach (54M+ total). Former financial advisor. Brand deals with Ally, WeBull. Strong Gen Z/millennial audience."
+    },
+    {
+      "handle": "@ramit",
+      "name": "Ramit Sethi",
+      "followers": "942K",
+      "focus": "Conscious spending, investing automation, wealth building",
+      "etf_relevance": 7,
+      "region": "US",
+      "content_type": "reels/carousel",
+      "sample_content": "Automated investing setups, target-date fund explanations, 'I Will Teach You To Be Rich' branded content",
+      "engagement_note": "Expanded into streaming partnerships and premium courses in 2026. Known for data-driven financial advice and no-guilt spending philosophy."
+    },
+    {
+      "handle": "@daveramsey",
+      "name": "Dave Ramsey",
+      "followers": "6M",
+      "focus": "Debt-free living, mutual funds, retirement planning",
+      "etf_relevance": 5,
+      "region": "US",
+      "content_type": "reels/stories",
+      "sample_content": "Baby Steps framework, growth stock mutual fund recommendations, debt snowball motivation",
+      "engagement_note": "Massive legacy following. Prefers mutual funds over ETFs but retirement content overlaps heavily with ETF audiences. High engagement on motivational reels."
+    },
+    {
+      "handle": "@erikankullberg",
+      "name": "Erika Kullberg",
+      "followers": "5M",
+      "focus": "Money-saving hacks, investing, travel hacks, legal tips",
+      "etf_relevance": 6,
+      "region": "US",
+      "content_type": "reels",
+      "sample_content": "Hidden money-saving laws, investment account setup walkthroughs, negotiation scripts",
+      "engagement_note": "21M+ cross-platform. Former corporate lawyer. Viral short-form content style. Strong brand partnership portfolio."
+    },
+    {
+      "handle": "@marktilbury",
+      "name": "Mark Tilbury",
+      "followers": "2M",
+      "focus": "Dividend investing, retirement planning, wealth building",
+      "etf_relevance": 8,
+      "region": "US",
+      "content_type": "reels/carousel",
+      "sample_content": "Dividend ETF breakdowns, compound interest visualizations, retirement portfolio construction guides",
+      "engagement_note": "Self-made millionaire and author. Demystifies dividend wealth strategies. Strong appeal to long-term passive investors."
+    },
+    {
+      "handle": "@minoritymindset",
+      "name": "Jaspreet Singh",
+      "followers": "3.8M",
+      "focus": "Financial education, entrepreneurship, investing",
+      "etf_relevance": 7,
+      "region": "US",
+      "content_type": "reels/carousel",
+      "sample_content": "Why schools don't teach money, index fund investing basics, contrarian financial thinking",
+      "engagement_note": "Founder of Minority Mindset platform and Market Briggs newsletter. Challenges traditional financial thinking. Strong entrepreneurial angle."
+    },
+    {
+      "handle": "@yourrichbff",
+      "name": "Vivian Tu",
+      "followers": "2.1M",
+      "focus": "Investing for millennials/Gen Z, budgeting, Wall Street insights",
+      "etf_relevance": 8,
+      "region": "US",
+      "content_type": "reels/carousel",
+      "sample_content": "ETF vs mutual fund comparisons, Roth IRA maxing strategies, beginner brokerage account setup",
+      "engagement_note": "Former JP Morgan trader. Relatable Gen Z voice. Frequently breaks down ETF concepts in under 60 seconds. High shareability."
+    },
+    {
+      "handle": "@taborismine",
+      "name": "Tori Dunlap",
+      "followers": "2.3M",
+      "focus": "Feminist finance, saving, investing basics",
+      "etf_relevance": 6,
+      "region": "US",
+      "content_type": "reels/carousel",
+      "sample_content": "First 100K savings journey, index fund investing for women, financial feminism tips",
+      "engagement_note": "Her Financial Feminist brand has 26.9M total cross-platform reach. Saved $100K by age 25. Book author and podcast host. Strong female millennial audience."
+    },
+    {
+      "handle": "@calebhammer",
+      "name": "Caleb Hammer",
+      "followers": "500K",
+      "focus": "Financial audits, debt intervention, investing education",
+      "etf_relevance": 6,
+      "region": "US",
+      "content_type": "reels",
+      "sample_content": "Financial Audit show clips, real people's portfolio reviews, 'stop buying dumb stuff' motivational content",
+      "engagement_note": "Host of Financial Audit YouTube show. Raw, confrontational style drives high engagement. Often recommends index fund/ETF investing as the simple path."
+    },
+    {
+      "handle": "@andreijikh",
+      "name": "Andrei Jikh",
+      "followers": "350K",
+      "focus": "Dividend investing, crypto, personal finance with magic",
+      "etf_relevance": 9,
+      "region": "US",
+      "content_type": "reels",
+      "sample_content": "Monthly dividend ETF income reports, portfolio transparency posts, magic-themed finance explainers",
+      "engagement_note": "4.3M YouTube subscribers. Known for combining card magic with finance content. Extremely transparent about his own ETF/dividend portfolio holdings."
+    },
+    {
+      "handle": "@tiffaboriche",
+      "name": "Tiffany Aliche (The Budgetnista)",
+      "followers": "630K",
+      "focus": "Budgeting, money challenges, wealth building for communities",
+      "etf_relevance": 5,
+      "region": "US",
+      "content_type": "carousel/stories",
+      "sample_content": "Live Richer Challenge, savings automations, beginner investing carousels",
+      "engagement_note": "NY Times bestselling author. Focus on making finance accessible to underserved communities. Strong community engagement through challenges."
+    },
+    {
+      "handle": "@weolbu_official",
+      "name": "월급쟁이부자들 (Weolbu)",
+      "followers": "380K",
+      "focus": "부동산/재테크 교육, ETF 적립식 투자, 월급 관리",
+      "etf_relevance": 7,
+      "region": "KR",
+      "content_type": "carousel/reels",
+      "sample_content": "월급으로 ETF 적립식 투자법, 부동산 vs ETF 수익률 비교, 재테크 초보 가이드",
+      "engagement_note": "Korea's leading salaried-worker wealth-building community. App + offline education platform. High trust factor among Korean office workers in their 20s-40s."
+    },
+    {
+      "handle": "@buiknam",
+      "name": "부읽남 (Buiknam)",
+      "followers": "61K",
+      "focus": "부동산 투자, 재테크, 경제 분석",
+      "etf_relevance": 5,
+      "region": "KR",
+      "content_type": "carousel/reels",
+      "sample_content": "부동산 경매 팁, 재테크 마인드셋, 투자 서적 리뷰",
+      "engagement_note": "Known as 'Jamsil Ajusshi'. Real estate focus with crossover into broader investment education. Book author and content creator."
+    },
+    {
+      "handle": "@syuka_world",
+      "name": "슈카 (Syuka)",
+      "followers": "120K",
+      "focus": "경제 해설, 글로벌 금융, ETF/주식 분석",
+      "etf_relevance": 8,
+      "region": "KR",
+      "content_type": "reels/carousel",
+      "sample_content": "미국 ETF 분석, 글로벌 경제 이슈 해설, AI ETF 전망",
+      "engagement_note": "Former bond trader (eBest Securities) and fund manager (Samsung Securities). YouTube-primary but growing Instagram. Trusted voice for Korean investors on global markets."
+    },
+    {
+      "handle": "@theinvestorkorea",
+      "name": "The Investor Korea",
+      "followers": "45K",
+      "focus": "한국/미국 주식, ETF 뉴스, 투자 교육",
+      "etf_relevance": 8,
+      "region": "KR",
+      "content_type": "carousel",
+      "sample_content": "미국 ETF 추천 TOP5, TIGER ETF 분석, 월배당 ETF 비교",
+      "engagement_note": "Media-style investment education account. Clean infographic carousels popular with Korean retail investors. Covers both KOSPI and US-listed ETFs."
+    },
+    {
+      "handle": "@plspo_investment",
+      "name": "플스포 (Plspo)",
+      "followers": "100K",
+      "focus": "메타인지 투자법, ETF 적립식, 재테크 교육",
+      "etf_relevance": 7,
+      "region": "KR",
+      "content_type": "carousel/reels",
+      "sample_content": "ETF 적립식 투자 실전기, 메타인지 기반 투자 전략, 재테크 서적 리뷰",
+      "engagement_note": "Combined 100K+ followers across platforms. Focus on metacognitive investing approach. Published author on investment strategies."
+    },
+    {
+      "handle": "@grahamstephan",
+      "name": "Graham Stephan",
+      "followers": "800K",
+      "focus": "Real estate, investing, frugal living, financial independence",
+      "etf_relevance": 7,
+      "region": "US",
+      "content_type": "reels",
+      "sample_content": "Real estate vs index fund returns, Roth IRA strategies, frugal millionaire lifestyle",
+      "engagement_note": "5.15M YouTube subscribers. Expanded into real estate education platforms and fintech partnerships in 2026. Multi-million dollar annual revenue from diversified content."
+    },
+    {
+      "handle": "@paboriche",
+      "name": "Taylor Price (Pricelesstay)",
+      "followers": "88K",
+      "focus": "Gen Z money education, budgeting, first-time investing",
+      "etf_relevance": 6,
+      "region": "US",
+      "content_type": "reels/carousel",
+      "sample_content": "How to start investing with $100, ETF basics for beginners, why your school didn't teach you about money",
+      "engagement_note": "Gen Z money mentor who identified lack of financial education in schools. 1.2M TikTok followers. Growing Instagram presence targeting youngest investor demographic."
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "source": "Web research compilation",
+    "date_compiled": "2026-04-06",
+    "notes": "Member counts are approximate as of early 2026. ETF relevance scored 1-10. Facebook investing communities tend to be group-centric rather than individual-influencer driven."
+  },
+  "groups": [
+    {
+      "name": "Bogleheads Community",
+      "group_name": "Bogleheads",
+      "members": "120K+ (forum) / 23K (Facebook page)",
+      "focus": "Index investing, 3-fund portfolio (VTI/VXUS/BND), low-cost ETFs, passive investing philosophy",
+      "etf_relevance": 10,
+      "content_type": "Portfolio reviews, ETF comparisons, tax-efficient investing discussions",
+      "engagement_note": "The gold standard for index/ETF investing community; 2,000+ posts/day on forum; strong crossover to Facebook group. Ideal for ETF education partnerships."
+    },
+    {
+      "name": "Stock Market for Beginners (Admins)",
+      "group_name": "Stock Market for Beginners",
+      "members": "20K+",
+      "focus": "Investing basics, stock picking, ETF introductions for newcomers",
+      "etf_relevance": 6,
+      "content_type": "Beginner Q&A, educational posts, basic portfolio construction",
+      "engagement_note": "Good entry point for reaching new investors who are ETF-curious; active community with beginner-friendly tone"
+    },
+    {
+      "name": "Market Traders & Penny Stocks (Admins)",
+      "group_name": "Market Traders & Penny Stocks",
+      "members": "62.9K",
+      "focus": "Active trading, penny stocks, some ETF discussion (leveraged/sector ETFs)",
+      "etf_relevance": 4,
+      "content_type": "Trade alerts, daily picks, 300+ posts/day",
+      "engagement_note": "One of the fastest-growing Facebook trading groups (since 2018); high volume but more trading-oriented than buy-and-hold ETF focused"
+    },
+    {
+      "name": "Robinhood Stock Trading (Community)",
+      "group_name": "Robinhood Stock Trading",
+      "members": "38K",
+      "focus": "Robinhood platform discussion, stocks, ETFs, options",
+      "etf_relevance": 5,
+      "content_type": "Portfolio screenshots, trade ideas, platform tips, 450+ posts/day",
+      "engagement_note": "Highly active community; younger demographic aligned with commission-free ETF trading; good for reaching retail ETF buyers"
+    },
+    {
+      "name": "FIRE (Financial Independence Retire Early)",
+      "group_name": "FIRE / FatFIRE Club",
+      "members": "50K+",
+      "focus": "Financial independence, index fund investing, ETF portfolio optimization, withdrawal strategies",
+      "etf_relevance": 8,
+      "content_type": "Portfolio allocation debates, Vanguard/Fidelity ETF comparisons, safe withdrawal rate discussions",
+      "engagement_note": "FIRE community is heavily ETF-aligned; members actively discuss Vanguard ETF performance and 3-fund strategies; high-intent audience"
+    },
+    {
+      "name": "Sensible Investing (UK-focused)",
+      "group_name": "Sensible Investing",
+      "members": "15K+",
+      "focus": "Evidence-based investing, Vanguard LifeStrategy, global ETFs",
+      "etf_relevance": 8,
+      "content_type": "ETF performance reviews, portfolio construction, cost analysis",
+      "engagement_note": "UK-centric passive investing group; strong alignment with Vanguard and iShares ETF products; educated investor audience"
+    },
+    {
+      "name": "Value Investing Group",
+      "group_name": "Value Investing",
+      "members": "25K+",
+      "focus": "Value stocks, Buffett-style investing, value ETFs (VTV, SCHV)",
+      "etf_relevance": 6,
+      "content_type": "Stock analysis, annual letter discussions, value ETF comparisons",
+      "engagement_note": "Long-running Facebook group for fundamental analysis; growing discussion of value-factor ETFs and smart-beta strategies"
+    },
+    {
+      "name": "Dividend Growth Investing Community",
+      "group_name": "Dividend Growth Investors",
+      "members": "30K+",
+      "focus": "Dividend stocks, dividend ETFs (SCHD, VYM, DGRO), passive income",
+      "etf_relevance": 8,
+      "content_type": "Dividend income tracking, ETF yield comparisons, DRIP strategies",
+      "engagement_note": "Highly relevant for dividend ETF marketing; members actively compare SCHD vs VYM vs HDV; monthly income screenshot sharing drives engagement"
+    },
+    {
+      "name": "한국 주식/ETF 투자 커뮤니티",
+      "group_name": "주식투자 정보공유방",
+      "members": "45K+",
+      "focus": "한국/미국 주식, ETF 투자, 연금저축 ETF",
+      "etf_relevance": 7,
+      "content_type": "종목 분석, ETF 추천, 투자 후기",
+      "engagement_note": "한국어권 페이스북 투자 커뮤니티; 미국 ETF(SPY, QQQ, SCHD) 관련 논의 활발; 네이버 카페와 병행 활동하는 회원 다수"
+    }
+  ]
+}

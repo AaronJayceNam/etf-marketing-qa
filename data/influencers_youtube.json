@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "source": "Web research compilation",
+    "date_compiled": "2026-04-06",
+    "notes": "Subscriber counts are approximate as of early 2026. ETF relevance scored 1-10 based on content focus."
+  },
+  "influencers": [
+    {
+      "handle": "@GrahamStephan",
+      "name": "Graham Stephan",
+      "subscribers": "5.15M",
+      "focus": "Real estate investing, personal finance, stock market, ETFs",
+      "etf_relevance": 7,
+      "region": "US",
+      "content_type": "Long-form education, market commentary, lifestyle",
+      "sample_content": "How I Would Invest $10,000 in 2026 (index funds & ETFs breakdown)",
+      "engagement_note": "One of the highest-engagement finance creators; strong millennial/Gen-Z audience, 550M+ total views"
+    },
+    {
+      "handle": "@AndreiJikh",
+      "name": "Andrei Jikh",
+      "subscribers": "4.3M",
+      "focus": "Dividend investing, passive income, ETFs, crypto",
+      "etf_relevance": 8,
+      "region": "US",
+      "content_type": "Education with entertainment (card magic + finance)",
+      "sample_content": "The Only ETFs You'll Ever Need (3-fund portfolio deep dive)",
+      "engagement_note": "Known for making dividend/ETF investing approachable; strong visual storytelling with card tricks"
+    },
+    {
+      "handle": "@MarkTilbury",
+      "name": "Mark Tilbury",
+      "subscribers": "8.04M",
+      "focus": "Entrepreneurship, investing basics, wealth building",
+      "etf_relevance": 6,
+      "region": "UK",
+      "content_type": "Short-form + long-form, storytelling style",
+      "sample_content": "I Invested $100/Month Into ETFs For 30 Years — Here's What Happened",
+      "engagement_note": "Largest subscriber base among finance YouTubers; British entrepreneur mixing practical money lessons with storytelling"
+    },
+    {
+      "handle": "@HumphreyYang",
+      "name": "Humphrey Yang",
+      "subscribers": "1.2M",
+      "focus": "Personal finance explainers, taxes, investing basics",
+      "etf_relevance": 6,
+      "region": "US",
+      "content_type": "Short punchy explainers, cross-platform (TikTok 3.4M+)",
+      "sample_content": "Index Funds vs ETFs — Which One Should You Pick?",
+      "engagement_note": "Former financial advisor; excels at breaking complex topics into digestible content; strong TikTok crossover audience"
+    },
+    {
+      "handle": "@TheFinancialDiet",
+      "name": "Chelsea Fagan / The Financial Diet",
+      "subscribers": "1.3M",
+      "focus": "Personal finance, budgeting, investing for beginners",
+      "etf_relevance": 5,
+      "region": "US",
+      "content_type": "Conversational finance education, lifestyle",
+      "sample_content": "How To Start Investing With $100 (ETFs, index funds, robo-advisors)",
+      "engagement_note": "Strong female-skewing audience; makes money topics approachable and engaging"
+    },
+    {
+      "handle": "@WhiteBoardFinance",
+      "name": "Marko Zlatic / Whiteboard Finance",
+      "subscribers": "1.1M",
+      "focus": "Investing education, real estate, ETFs, entrepreneurship",
+      "etf_relevance": 7,
+      "region": "US",
+      "content_type": "Whiteboard-style tutorials, deep dives",
+      "sample_content": "Best Vanguard ETFs for Long-Term Wealth (VTI vs VOO vs VT)",
+      "engagement_note": "Highly actionable content with visual whiteboard explanations; popular for ETF comparisons"
+    },
+    {
+      "handle": "@DaveRamsey",
+      "name": "Dave Ramsey / The Ramsey Show",
+      "subscribers": "3.5M",
+      "focus": "Debt elimination, personal finance, mutual funds/ETFs",
+      "etf_relevance": 4,
+      "region": "US",
+      "content_type": "Call-in show format, motivational finance",
+      "sample_content": "Why I Recommend Index Funds Over Individual Stocks",
+      "engagement_note": "18M+ weekly listeners across platforms; enormous mainstream reach but less ETF-specific"
+    },
+    {
+      "handle": "@FinancialEducation",
+      "name": "Jeremy / Financial Education",
+      "subscribers": "720K",
+      "focus": "Stock picking, investing education, market analysis",
+      "etf_relevance": 5,
+      "region": "US",
+      "content_type": "Market commentary, stock analysis, education",
+      "sample_content": "ETF vs Individual Stocks: What Actually Makes More Money?",
+      "engagement_note": "100M+ total views; combines education with real portfolio updates"
+    },
+    {
+      "handle": "@RickyGutierrez",
+      "name": "Ricky Gutierrez",
+      "subscribers": "1.1M",
+      "focus": "Stocks, ETFs, penny stocks, crypto, real estate",
+      "etf_relevance": 5,
+      "region": "US",
+      "content_type": "Trading tutorials, portfolio updates",
+      "sample_content": "How to Build a $100K Portfolio with ETFs in Your 20s",
+      "engagement_note": "Appeals to younger traders; covers broad range of investment vehicles including ETFs"
+    },
+    {
+      "handle": "@PassiveIncomeInvesting",
+      "name": "Passive Income Investing",
+      "subscribers": "280K",
+      "focus": "Dividend ETFs, covered call ETFs, REITs, income funds",
+      "etf_relevance": 10,
+      "region": "US",
+      "content_type": "ETF reviews, dividend income tracking, portfolio updates",
+      "sample_content": "JEPI vs JEPQ vs SCHD: Best Dividend ETF for Passive Income 2026",
+      "engagement_note": "Highly ETF-focused niche channel; strong community of income-oriented ETF investors"
+    },
+    {
+      "handle": "@JosephCarlson",
+      "name": "Joseph Carlson",
+      "subscribers": "500K",
+      "focus": "Dividend investing, ETF portfolio building, long-term wealth",
+      "etf_relevance": 8,
+      "region": "US",
+      "content_type": "Portfolio updates, ETF analysis, calm educational style",
+      "sample_content": "My Entire ETF Portfolio Revealed (and why I hold each one)",
+      "engagement_note": "Known for transparent real-money portfolio tracking; loyal community of dividend/ETF enthusiasts"
+    },
+    {
+      "handle": "@슈카월드",
+      "name": "슈카월드 (Syuka World)",
+      "subscribers": "3.65M",
+      "focus": "경제 전반, 금융 이슈, 투자 트렌드, ETF 포함",
+      "etf_relevance": 6,
+      "region": "KR",
+      "content_type": "경제 잡썰 (economic commentary), storytelling",
+      "sample_content": "미국 ETF가 한국 투자의 답인 이유 (S&P500 ETF 완벽 분석)",
+      "engagement_note": "한국 최대 경제 유튜브 채널; 연 추정 수익 9억원; 삼프로TV와 합병 논의"
+    },
+    {
+      "handle": "@삼프로TV",
+      "name": "삼프로TV (3ProTV)",
+      "subscribers": "2.85M",
+      "focus": "경제 뉴스, 주식/ETF 분석, 전문가 인터뷰",
+      "etf_relevance": 7,
+      "region": "KR",
+      "content_type": "뉴스 분석, 전문가 대담, 라이브 방송",
+      "sample_content": "2026 ETF 포트폴리오 전략: 전문가 3인이 추천하는 ETF",
+      "engagement_note": "전문가 패널 형식으로 신뢰도 높음; 연 추정 수익 6.9억원; 아침 라이브로 개인투자자 출근 루틴에 정착"
+    },
+    {
+      "handle": "@박곰희TV",
+      "name": "박곰희TV (Park Gomhee TV)",
+      "subscribers": "680K",
+      "focus": "자산관리, 연금저축, IRP, ETF 투자",
+      "etf_relevance": 9,
+      "region": "KR",
+      "content_type": "ETF 비교, 연금 투자 가이드, 초보 투자자 교육",
+      "sample_content": "연금저축펀드 ETF 추천 포트폴리오 2026 (S&P500, 나스닥100)",
+      "engagement_note": "'내돈은 내손으로' 슬로건; ETF와 연금 투자에 특화되어 ETF 마케팅 타겟으로 매우 적합"
+    },
+    {
+      "handle": "@소수몽키",
+      "name": "소수몽키 (Sosu Monkey)",
+      "subscribers": "420K",
+      "focus": "미국 배당주, ETF 투자, 직장인 재테크",
+      "etf_relevance": 9,
+      "region": "KR",
+      "content_type": "배당 ETF 분석, 포트폴리오 공개, 실전 투자기",
+      "sample_content": "SCHD vs VYM vs HDV 배당 ETF 완전 비교 (직장인 적립식 투자)",
+      "engagement_note": "『잠든 사이 월급 버는 미국 배당주 투자』 저자; 직장인 투자자 공감대 형성에 강점"
+    },
+    {
+      "handle": "@머니코믹스",
+      "name": "머니코믹스 (Money Comics)",
+      "subscribers": "350K",
+      "focus": "경제 교육, ETF, 투자 기초",
+      "etf_relevance": 6,
+      "region": "KR",
+      "content_type": "애니메이션/일러스트 기반 경제 교육",
+      "sample_content": "ETF가 뭔지 5분만에 이해하기 (초보자용 완벽 설명)",
+      "engagement_note": "독특한 만화/일러스트 형식으로 경제 교육; 젊은층 유입에 효과적"
+    }
+  ]
+}

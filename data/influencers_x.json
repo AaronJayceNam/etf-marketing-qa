@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "source": "Web research compilation (ETFinTwit 50, FinTwit community, finance media)",
+    "date_compiled": "2026-04-06",
+    "notes": "Follower counts are approximate as of early 2026. ETF relevance scored 1-10."
+  },
+  "influencers": [
+    {
+      "handle": "@EricBalchunas",
+      "name": "Eric Balchunas",
+      "followers": "350K",
+      "focus": "ETF analysis, fund flows, new ETF launches, regulatory developments",
+      "etf_relevance": 10,
+      "region": "US",
+      "content_type": "Breaking ETF news, data-driven analysis, fund comparisons",
+      "sample_content": "NEW: Bitcoin ETF inflows just crossed $50B cumulative. Here's the breakdown by issuer...",
+      "engagement_note": "Bloomberg Senior ETF Analyst; the single most influential ETF voice on X. ETFinTwit 50 member. When he tweets, the industry pays attention."
+    },
+    {
+      "handle": "@NateGeraci",
+      "name": "Nate Geraci",
+      "followers": "120K",
+      "focus": "ETF industry trends, new fund launches, ETF education",
+      "etf_relevance": 10,
+      "region": "US",
+      "content_type": "ETF commentary, podcast clips, industry analysis",
+      "sample_content": "This week's ETF launches: 12 new active ETFs filed. Here's what stands out...",
+      "engagement_note": "President of The ETF Store; host of ETF Prime podcast; essential follow for ETF industry professionals"
+    },
+    {
+      "handle": "@MebFaber",
+      "name": "Meb Faber",
+      "followers": "200K",
+      "focus": "Quantitative investing, global asset allocation, ETF strategies",
+      "etf_relevance": 9,
+      "region": "US",
+      "content_type": "Research threads, contrarian takes, podcast promotion",
+      "sample_content": "The US is now 65% of global market cap. History suggests mean reversion. Here's why international ETFs deserve a look...",
+      "engagement_note": "Founder of Cambria Investments (ETF issuer); author and podcast host; combines academic rigor with accessible commentary"
+    },
+    {
+      "handle": "@morganhousel",
+      "name": "Morgan Housel",
+      "followers": "567K",
+      "focus": "Behavioral finance, long-term investing philosophy, wealth psychology",
+      "etf_relevance": 6,
+      "region": "US",
+      "content_type": "Aphorisms, essays, behavioral investing insights",
+      "sample_content": "The best investment strategy is the one you can stick with for 30 years. That's usually a boring index fund.",
+      "engagement_note": "Author of 'The Psychology of Money'; partner at Collaborative Fund; massive reach for investing philosophy"
+    },
+    {
+      "handle": "@LizAnnSonders",
+      "name": "Liz Ann Sonders",
+      "followers": "453K",
+      "focus": "Macro market analysis, economic indicators, equity strategy",
+      "etf_relevance": 6,
+      "region": "US",
+      "content_type": "Charts, macro data commentary, market outlook",
+      "sample_content": "Updated: S&P 500 sector rotation showing defensive tilt. Here are the ETF flow implications...",
+      "engagement_note": "Chief Investment Strategist at Charles Schwab; highly respected institutional voice with retail crossover"
+    },
+    {
+      "handle": "@DaveNadig",
+      "name": "Dave Nadig",
+      "followers": "75K",
+      "focus": "ETF structure, market microstructure, fintech, ETF industry analysis",
+      "etf_relevance": 10,
+      "region": "US",
+      "content_type": "Deep ETF structural analysis, industry commentary",
+      "sample_content": "Thread on why ETF premium/discount matters less than you think, and when it really does matter...",
+      "engagement_note": "Former CIO at ETF Trends; ETFinTwit 50 member; one of the deepest ETF structural thinkers on the platform"
+    },
+    {
+      "handle": "@TomLydon",
+      "name": "Tom Lydon",
+      "followers": "60K",
+      "focus": "ETF trends, thematic investing, ETF education",
+      "etf_relevance": 9,
+      "region": "US",
+      "content_type": "ETF trend analysis, conference coverage, education",
+      "sample_content": "Thematic ETFs saw $2B in inflows last month. AI and clean energy leading the way.",
+      "engagement_note": "Former CEO of ETF Trends; veteran ETF industry commentator and conference organizer"
+    },
+    {
+      "handle": "@edaboringmoney",
+      "name": "Erin Lowry",
+      "followers": "85K",
+      "focus": "Personal finance, investing basics, financial literacy",
+      "etf_relevance": 5,
+      "region": "US",
+      "content_type": "Beginner-friendly finance tips, book promotion, community engagement",
+      "sample_content": "Starting to invest? A low-cost target-date fund or a 3-ETF portfolio is all you need.",
+      "engagement_note": "Author of 'Broke Millennial' series; strong millennial audience; gateway influencer for new ETF investors"
+    },
+    {
+      "handle": "@ETFheathens",
+      "name": "ETF Heathens",
+      "followers": "25K",
+      "focus": "ETF commentary, fund analysis, FinTwit community",
+      "etf_relevance": 10,
+      "region": "US",
+      "content_type": "ETF hot takes, fund comparisons, industry humor",
+      "sample_content": "New leveraged single-stock ETF filed today. The ETF wrapper can hold anything now.",
+      "engagement_note": "Niche but highly engaged ETF-specific community account; strong ETFinTwit presence"
+    },
+    {
+      "handle": "@TKer_",
+      "name": "Sam Ro",
+      "followers": "95K",
+      "focus": "Macro economics, stock market analysis, long-term investing",
+      "etf_relevance": 6,
+      "region": "US",
+      "content_type": "Weekly market recaps, charts, economic data breakdowns",
+      "sample_content": "Stocks continue to climb the wall of worry. Long-term index investors have been rewarded for staying the course.",
+      "engagement_note": "Former Yahoo Finance editor; runs TKer newsletter; data-driven and measured voice"
+    },
+    {
+      "handle": "@TrungTPhan",
+      "name": "Trung Phan",
+      "followers": "380K",
+      "focus": "Business/finance storytelling, tech investing, market trends",
+      "etf_relevance": 4,
+      "region": "US/CA",
+      "content_type": "Visual threads, business analysis, humor",
+      "sample_content": "The story of how Vanguard disrupted Wall Street with index funds (thread)",
+      "engagement_note": "Viral business storyteller; not ETF-specific but enormous reach among finance-curious audience"
+    },
+    {
+      "handle": "@BrianFeroldi",
+      "name": "Brian Feroldi",
+      "followers": "280K",
+      "focus": "Financial literacy, stock analysis, investing education",
+      "etf_relevance": 5,
+      "region": "US",
+      "content_type": "Visual financial education threads, infographics",
+      "sample_content": "How to read an ETF fact sheet in 60 seconds (visual thread)",
+      "engagement_note": "Master of visual financial education; threads regularly go viral; co-author of 'Why Does The Stock Market Go Up?'"
+    }
+  ]
+}
