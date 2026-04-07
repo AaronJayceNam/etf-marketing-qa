@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETF Marketing Platform Advisor</title>
+    <style>
+        :root {
+            --primary: #0D9488;
+            --primary-light: #CCFBF1;
+            --accent: #7C3AED;
+            --accent-light: #EDE9FE;
+            --dark: #111827;
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-400: #9CA3AF;
+            --gray-600: #4B5563;
+            --gray-800: #1F2937;
+            --red: #EF4444;
+            --green: #10B981;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, sans-serif;
+            background: var(--gray-50);
+            color: var(--gray-800);
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0D9488 0%, #7C3AED 50%, #1E40AF 100%);
+            padding: 32px 24px;
+            text-align: center;
+            color: white;
+        }
+        .header h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: 6px; }
+        .header p { opacity: 0.85; font-size: 0.9rem; }
+        .badges { margin-top: 12px; display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
+        .badge {
+            background: rgba(255,255,255,0.2);
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 24px; }
+
+        /* API Key */
+        .api-section {
+            background: white;
+            border-radius: 14px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+        .api-section label { font-size: 0.8rem; font-weight: 600; color: var(--gray-600); }
+        .api-section input {
+            width: 100%;
+            padding: 10px 14px;
+            border: 2px solid var(--gray-200);
+            border-radius: 10px;
+            font-size: 0.9rem;
+            margin-top: 6px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .api-section input:focus { border-color: var(--primary); }
+
+        /* Question Input */
+        .question-section {
+            background: white;
+            border-radius: 14px;
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+        .question-section h2 { font-size: 1.1rem; margin-bottom: 12px; }
+        .question-area {
+            display: flex;
+            gap: 10px;
+        }
+        .question-area textarea {
+            flex: 1;
+            padding: 14px;
+            border: 2px solid var(--gray-200);
+            border-radius: 12px;
+            font-size: 0.95rem;
+            resize: none;
+            height: 80px;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .question-area textarea:focus { border-color: var(--primary); }
+        .ask-btn {
+            padding: 14px 28px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.15s, opacity 0.15s;
+            white-space: nowrap;
+        }
+        .ask-btn:hover { transform: scale(1.02); }
+        .ask-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+        /* Examples */
+        .examples { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
+        .example-chip {
+            padding: 5px 12px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: background 0.15s;
+        }
+        .example-chip:hover { background: #99F6E4; }
+
+        /* Loading */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+        .loading.active { display: block; }
+        .spinner {
+            width: 40px; height: 40px;
+            border: 4px solid var(--gray-200);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+            margin: 0 auto 16px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .loading p { color: var(--gray-600); font-size: 0.9rem; }
+        .loading .iter-badge {
+            display: inline-block;
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        /* Answer */
+        .answer-section {
+            display: none;
+            background: white;
+            border-radius: 14px;
+            padding: 28px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+            border-left: 4px solid var(--primary);
+        }
+        .answer-section.active { display: block; }
+        .answer-section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .answer-content {
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+        .answer-content h1, .answer-content h2, .answer-content h3 {
+            margin: 20px 0 8px 0;
+            color: var(--dark);
+        }
+        .answer-content h1 { font-size: 1.3rem; }
+        .answer-content h2 { font-size: 1.15rem; }
+        .answer-content h3 { font-size: 1.05rem; }
+        .answer-content ul, .answer-content ol { margin-left: 20px; margin-bottom: 12px; }
+        .answer-content li { margin-bottom: 4px; }
+        .answer-content strong { color: var(--accent); }
+        .answer-content table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.88rem; }
+        .answer-content th {
+            background: var(--gray-100);
+            padding: 10px 12px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--gray-200);
+        }
+        .answer-content td { padding: 10px 12px; border-bottom: 1px solid var(--gray-100); }
+        .answer-content tr:hover { background: var(--gray-50); }
+        .answer-content blockquote {
+            border-left: 3px solid var(--primary);
+            padding: 8px 16px;
+            background: var(--primary-light);
+            border-radius: 0 8px 8px 0;
+            margin: 12px 0;
+        }
+        .answer-content code {
+            background: var(--gray-100);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.85em;
+        }
+
+        /* Eval Scores */
+        .eval-section {
+            display: none;
+            background: white;
+            border-radius: 14px;
+            padding: 24px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+        .eval-section.active { display: block; }
+        .eval-section h3 { font-size: 1rem; margin-bottom: 12px; color: var(--gray-600); }
+        .eval-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+        .eval-item {
+            text-align: center;
+            padding: 14px 8px;
+            background: var(--gray-50);
+            border-radius: 10px;
+        }
+        .eval-score { font-size: 1.6rem; font-weight: 800; color: var(--green); }
+        .eval-score.low { color: var(--red); }
+        .eval-label { font-size: 0.7rem; color: var(--gray-600); margin-top: 4px; }
+        .eval-meta {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 0.9rem;
+        }
+        .eval-pass { color: var(--green); font-weight: 700; }
+        .eval-fail { color: var(--red); font-weight: 700; }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 24px;
+            font-size: 0.75rem;
+            color: var(--gray-400);
+        }
+        .footer a { color: var(--accent); text-decoration: none; }
+
+        @media (max-width: 640px) {
+            .question-area { flex-direction: column; }
+            .eval-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>ETF Marketing Platform Advisor</h1>
+    <p>ETF 마케팅 질문을 입력하면, 최적의 광고 매체를 추천합니다</p>
+    <div class="badges">
+        <span class="badge">Self-Refine (ICLR 2024)</span>
+        <span class="badge">RAG (BISE 2025)</span>
+        <span class="badge">ReAct (ICLR 2023)</span>
+        <span class="badge">DSPy (ICLR 2024)</span>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="api-section">
+        <label>Anthropic API Key</label>
+        <input type="password" id="api-key" placeholder="sk-ant-..." />
+    </div>
+
+    <div class="question-section">
+        <h2>질문하기</h2>
+        <div class="question-area">
+            <textarea id="question" placeholder="ETF 마케팅 관련 질문을 입력하세요..."></textarea>
+            <button class="ask-btn" id="ask-btn" onclick="askQuestion()">질문</button>
+        </div>
+        <div class="examples">
+            <button class="example-chip" onclick="setQ('종목 비교를 할 예정인데 어떤 광고 매체가 좋을까?')">종목 비교 광고 매체</button>
+            <button class="example-chip" onclick="setQ('초보자 대상 인덱스 ETF 교육 콘텐츠를 만들고 싶은데 어떤 플랫폼이 좋을까?')">초보자 ETF 교육</button>
+            <button class="example-chip" onclick="setQ('신규 AI 테마 ETF를 출시하는데 어떤 채널에서 홍보하면 좋을까?')">AI ETF 신규 출시</button>
+            <button class="example-chip" onclick="setQ('배당 ETF를 30-40대 직장인에게 광고하고 싶은데 추천 매체는?')">배당 ETF 30-40대</button>
+            <button class="example-chip" onclick="setQ('KODEX vs TIGER ETF 비교 콘텐츠를 제작하려는데 어떤 플랫폼이 효과적일까?')">한국 ETF 비교</button>
+            <button class="example-chip" onclick="setQ('레버리지 ETF 투자 교육 콘텐츠는 어디서 유통하는 게 좋을까?')">레버리지 ETF 교육</button>
+        </div>
+    </div>
+
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <p id="loading-text">Planner가 질문을 분석하고 있습니다...</p>
+        <span class="iter-badge" id="iter-badge">Iteration 1/3</span>
+    </div>
+
+    <div class="answer-section" id="answer-section">
+        <h2>추천 결과</h2>
+        <div class="answer-content" id="answer-content"></div>
+    </div>
+
+    <div class="eval-section" id="eval-section">
+        <h3>Self-Refine Evaluation (Iteration <span id="iter-count">1</span>)</h3>
+        <div class="eval-grid">
+            <div class="eval-item"><div class="eval-score" id="s-m1">-</div><div class="eval-label">M1 Relevance</div></div>
+            <div class="eval-item"><div class="eval-score" id="s-m2">-</div><div class="eval-label">M2 Coverage</div></div>
+            <div class="eval-item"><div class="eval-score" id="s-m3">-</div><div class="eval-label">M3 Evidence</div></div>
+            <div class="eval-item"><div class="eval-score" id="s-m4">-</div><div class="eval-label">M4 Actionability</div></div>
+            <div class="eval-item"><div class="eval-score" id="s-m5">-</div><div class="eval-label">M5 Clarity</div></div>
+        </div>
+        <div class="eval-meta" id="eval-meta"></div>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>
+        Based on:
+        <a href="https://arxiv.org/abs/2303.17651">Self-Refine</a> &middot;
+        <a href="https://arxiv.org/abs/2210.03629">ReAct</a> &middot;
+        <a href="https://arxiv.org/abs/2310.03714">DSPy</a> &middot;
+        RAG (BISE 2025)
+    </p>
+</div>
+
+<script>
+function setQ(q) {
+    document.getElementById('question').value = q;
+}
+
+function simpleMarkdown(text) {
+    let html = text
+        .replace(/^### (.*$)/gm, '<h3>$1</h3>')
+        .replace(/^## (.*$)/gm, '<h2>$1</h2>')
+        .replace(/^# (.*$)/gm, '<h1>$1</h1>')
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+        .replace(/`(.*?)`/g, '<code>$1</code>')
+        .replace(/^> (.*$)/gm, '<blockquote>$1</blockquote>')
+        .replace(/^- (.*$)/gm, '<li>$1</li>')
+        .replace(/^\d+\. (.*$)/gm, '<li>$1</li>');
+
+    // tables
+    html = html.replace(/\|(.+)\|\n\|[-| :]+\|\n((?:\|.+\|\n?)*)/g, (m, header, body) => {
+        const ths = header.split('|').filter(c=>c.trim()).map(c=>`<th>${c.trim()}</th>`).join('');
+        const rows = body.trim().split('\n').map(r => {
+            const tds = r.split('|').filter(c=>c.trim()).map(c=>`<td>${c.trim()}</td>`).join('');
+            return `<tr>${tds}</tr>`;
+        }).join('');
+        return `<table><thead><tr>${ths}</tr></thead><tbody>${rows}</tbody></table>`;
+    });
+
+    // wrap li in ul
+    html = html.replace(/((?:<li>.*<\/li>\n?)+)/g, '<ul>$1</ul>');
+    // paragraphs
+    html = html.replace(/\n\n/g, '<br><br>');
+    return html;
+}
+
+async function askQuestion() {
+    const apiKey = document.getElementById('api-key').value.trim();
+    const question = document.getElementById('question').value.trim();
+    if (!apiKey) return alert('API Key를 입력해주세요.');
+    if (!question) return alert('질문을 입력해주세요.');
+
+    const btn = document.getElementById('ask-btn');
+    const loading = document.getElementById('loading');
+    const answerSection = document.getElementById('answer-section');
+    const evalSection = document.getElementById('eval-section');
+
+    btn.disabled = true;
+    loading.classList.add('active');
+    answerSection.classList.remove('active');
+    evalSection.classList.remove('active');
+
+    const phases = [
+        'Planner: 질문을 분석하고 있습니다...',
+        'Generator: RAG 기반 추천을 생성하고 있습니다...',
+        'Evaluator: 답변 품질을 평가하고 있습니다...'
+    ];
+    let phase = 0;
+    const phaseInterval = setInterval(() => {
+        phase = (phase + 1) % phases.length;
+        document.getElementById('loading-text').textContent = phases[phase];
+    }, 4000);
+
+    try {
+        const resp = await fetch('/api/ask', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ question, api_key: apiKey })
+        });
+
+        if (!resp.ok) {
+            const err = await resp.json();
+            throw new Error(err.detail || `Error ${resp.status}`);
+        }
+
+        const data = await resp.json();
+
+        // Render answer
+        document.getElementById('answer-content').innerHTML = simpleMarkdown(data.answer);
+        answerSection.classList.add('active');
+
+        // Render eval
+        const ev = data.evaluation;
+        const metrics = ['M1', 'M2', 'M3', 'M4', 'M5'];
+        metrics.forEach((m, i) => {
+            const el = document.getElementById(`s-m${i+1}`);
+            const score = ev[m]?.score ?? '-';
+            el.textContent = score;
+            el.className = 'eval-score' + (score < 7 ? ' low' : '');
+        });
+        document.getElementById('iter-count').textContent = data.iterations;
+        document.getElementById('eval-meta').innerHTML =
+            `<strong>Mean: ${ev.mean ?? '-'}</strong> / 10 &nbsp;|&nbsp; ` +
+            `<strong>Min: ${ev.min ?? '-'}</strong> / 10 &nbsp;|&nbsp; ` +
+            `<span class="${ev.pass ? 'eval-pass' : 'eval-fail'}">${ev.pass ? 'PASS' : 'FAIL'}</span> ` +
+            `&nbsp;|&nbsp; Iterations: ${data.iterations}`;
+        evalSection.classList.add('active');
+
+        answerSection.scrollIntoView({ behavior: 'smooth' });
+
+    } catch (err) {
+        alert('Error: ' + err.message);
+    } finally {
+        clearInterval(phaseInterval);
+        loading.classList.remove('active');
+        btn.disabled = false;
+    }
+}
+
+// Enter key
+document.getElementById('question').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        askQuestion();
+    }
+});
+</script>
+
+</body>
+</html>
