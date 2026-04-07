@@ -2,18 +2,22 @@
 ETF Marketing Platform Advisor — Backend API
 Based on: Self-Refine + RAG + ReAct + DSPy
 
-Requires: pip install fastapi uvicorn anthropic
+Requires: pip install fastapi uvicorn openai python-dotenv
 Run: uvicorn main:app --reload --port 8000
 """
 
 import os
 import json
+from typing import Optional
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
-from anthropic import Anthropic
+from openai import OpenAI
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = FastAPI(title="ETF Marketing QA")
 app.add_middleware(
@@ -135,9 +139,13 @@ EVAL_PROMPT = """당신은 ETF 마케팅 답변의 품질 평가자입니다. �
 """
 
 
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
+MODEL = "gpt-4o"
+
+
 class QuestionRequest(BaseModel):
     question: str
-    api_key: str
+    api_key: str = ""  # optional — falls back to env
 
 
 class AnswerResponse(BaseModel):
@@ -148,16 +156,23 @@ class AnswerResponse(BaseModel):
 
 @app.post("/api/ask", response_model=AnswerResponse)
 async def ask_question(req: QuestionRequest):
-    client = Anthropic(api_key=req.api_key)
+    key = (req.api_key if req.api_key else "") or OPENAI_API_KEY
+    if not key:
+        raise HTTPException(status_code=400, detail="OPENAI_API_KEY not set")
+    client = OpenAI(api_key=key)
     max_iterations = 3
     answer = ""
     evaluation = {}
 
     for iteration in range(1, max_iterations + 1):
         # GENERATOR: produce answer
-        gen_messages = [{"role": "user", "content": req.question}]
+        gen_messages = [
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": req.question},
+        ]
         if iteration > 1 and evaluation.get("feedback"):
             gen_messages = [
+                {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": req.question},
                 {"role": "assistant", "content": answer},
                 {
@@ -166,28 +181,27 @@ async def ask_question(req: QuestionRequest):
                 },
             ]
 
-        gen_resp = client.messages.create(
-            model="claude-sonnet-4-20250514",
+        gen_resp = client.chat.completions.create(
+            model=MODEL,
             max_tokens=4096,
-            system=SYSTEM_PROMPT,
             messages=gen_messages,
         )
-        answer = gen_resp.content[0].text
+        answer = gen_resp.choices[0].message.content
 
         # EVALUATOR: assess quality
-        eval_resp = client.messages.create(
-            model="claude-sonnet-4-20250514",
+        eval_resp = client.chat.completions.create(
+            model=MODEL,
             max_tokens=1024,
-            system=EVAL_PROMPT,
             messages=[
+                {"role": "system", "content": EVAL_PROMPT},
                 {
                     "role": "user",
                     "content": f"## 사용자 질문\n{req.question}\n\n## 답변\n{answer}",
-                }
+                },
             ],
         )
 
-        eval_text = eval_resp.content[0].text
+        eval_text = eval_resp.choices[0].message.content
         try:
             json_start = eval_text.find("{")
             json_end = eval_text.rfind("}") + 1

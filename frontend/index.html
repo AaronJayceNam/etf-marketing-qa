@@ -275,8 +275,8 @@
 <div class="container">
 
     <div class="api-section">
-        <label>Anthropic API Key</label>
-        <input type="password" id="api-key" placeholder="sk-ant-..." />
+        <label>OpenAI API Key (서버에 .env 설정 시 생략 가능)</label>
+        <input type="password" id="api-key" placeholder="sk-proj-... (optional if .env is set)" />
     </div>
 
     <div class="question-section">
@@ -367,7 +367,6 @@ function simpleMarkdown(text) {
 async function askQuestion() {
     const apiKey = document.getElementById('api-key').value.trim();
     const question = document.getElementById('question').value.trim();
-    if (!apiKey) return alert('API Key를 입력해주세요.');
     if (!question) return alert('질문을 입력해주세요.');
 
     const btn = document.getElementById('ask-btn');
@@ -395,7 +394,7 @@ async function askQuestion() {
         const resp = await fetch('/api/ask', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ question, api_key: apiKey })
+            body: JSON.stringify({ question, api_key: apiKey || "" })
         });
 
         if (!resp.ok) {
